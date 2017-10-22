@@ -3,6 +3,10 @@ Super Rock Paper Scissors - v1.0.0
 
 Super Rock Paper Scissors was built in honour of the old 8bit systems, in particular the NES. The design is a twist on the original Super Mario Bros. released in 1985.
 
+![Title Screen](screenshots/1.png "Title Screen")
+
+![Game Play](screenshots/2.png "Game Play")
+
 Features
 ---
 Super Rock Paper Scissors includes the following features:
@@ -34,8 +38,9 @@ Technologies
 Super Rock Paper Scissors is build using React. The app was created using `react-create-app` with a few small additions. 
 
 Additions include:
-* `Redux` - For state management - https://github.com/reactjs/redux
-* `Flow` - For static type checking - https://github.com/facebook/flow
+* `redux` - For state management - https://github.com/reactjs/redux
+* `flow` - For static type checking - https://github.com/facebook/flow
+* `node-sass-chokidar` - Sass pre-processor was used for styles throughout the app 
 
 Testing
 ---
@@ -51,7 +56,7 @@ or
 
     yarn test
     
-You may be prompted to press `a` to run all the tests.
+You will be prompted to press `a` to run all the tests.
 
 Flow can also be used ran to check for potential typing errors, simply run the following after set up:
 
@@ -79,5 +84,7 @@ This project took around 5-6 hours for the tests and logic and a further 4 hours
 Improvements
 ---
 
-There are a few things I would like to improve for the next version, I would like to add a lot more polish to game as a whole. I feel that scene transitions, additional animations, and sound effects would definately help give this even more of a retro feel.
+There are a few things I would like to improve for the next version, I would like to add a lot more polish to game as a whole. I feel that scene transitions, additional animations, and sound effects would definitely help give this even more of a retro feel.
 In addition to the UI improvements I would like to store the high score in local storage for subsequent visits to the game.
+
+Some logic needs to be moved out of components and either into static methods that can be tested or into pre-existing classes where they best fit. Examples of these methods can be found in the `Info` component and `Victory` component.
