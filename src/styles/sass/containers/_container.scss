@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        flex-direction: row;
+    }
+
+    &--grow {
+        flex-grow: 1;
+    }
+
+    &--center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--min {
+        height: 120px;
+
+        @media screen and (max-height: 450px) {
+            height: auto;
+        }
+    }
+}

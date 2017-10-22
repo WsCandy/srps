@@ -1,0 +1,19 @@
+.action {
+    color: $text;
+    font-family: $main_font;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    padding: 5px 0;
+
+    @media screen and (max-width: 800px) {
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--center {
+        align-self: center;
+    }
+}

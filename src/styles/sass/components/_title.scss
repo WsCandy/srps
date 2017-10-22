@@ -1,0 +1,28 @@
+.title {
+    &__block {
+        background-color: $block;
+        font-family: $title_font;
+        font-size: 9rem;
+        color: $title;
+        text-transform: lowercase;
+        box-shadow: 3px 3px 0 $shadow, -3px -3px 0 $lightShadow;
+        padding: 0 15px 25px;
+        max-width: 100%;
+
+        // Margins so the shadows don't overlay elements.
+        margin-bottom: 3px;
+        margin-top: 3px;
+
+        @media screen and (max-width: 740px) {
+            font-size: 3.8rem;
+        }
+    }
+
+    &__main {
+        text-transform: uppercase;
+    }
+
+    &--shadow {
+        text-shadow: 3px 10px 0 $shadow;
+    }
+}
