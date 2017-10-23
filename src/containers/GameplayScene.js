@@ -18,9 +18,15 @@ class GameplayScene extends Component<Props, State> {
         w: document.documentElement ? document.documentElement.clientWidth : 0
     };
 
+    listener: Function = this._setSize.bind(this);
+
     componentDidMount() {
         this._startNextRound();
-        window.addEventListener("resize", e => this._setSize());
+        window.addEventListener("resize", this.listener);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.listener);
     }
 
     render() {
