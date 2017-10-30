@@ -42,8 +42,8 @@ class TitleScene extends Component<Props, State> {
 
     _setSize(): void {
         this.setState({
-            h: document.documentElement.clientHeight | 0,
-            w: document.documentElement.clientWidth | 0
+            h: document.documentElement ? document.documentElement.clientHeight : 0,
+            w: document.documentElement ? document.documentElement.clientWidth : 0
         })
     }
 
