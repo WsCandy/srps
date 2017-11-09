@@ -9,4 +9,4 @@ cache:
   yarn: true
 before_script:
   - yarn install
-script: build
+script: yarn build
