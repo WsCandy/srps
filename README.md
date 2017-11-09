@@ -1,6 +1,8 @@
 Super Rock Paper Scissors - v1.0.0
 =====
 
+[![Build Status](https://travis-ci.org/WsCandy/srps.svg?branch=master)](https://travis-ci.org/WsCandy/srps)
+
 Super Rock Paper Scissors was built in honour of the old 8bit systems, in particular the NES. The design is a twist on the original Super Mario Bros. released in 1985.
 
 ![Title Screen](screenshots/1.png "Title Screen")
