@@ -1,24 +1,31 @@
 {
   "name": "srps",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
-  "dependencies": {
-    "flow-bin": "^0.57.3",
-    "node-sass-chokidar": "^0.0.3",
-    "npm-run-all": "^4.1.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14",
-    "redux": "^3.7.2"
-  },
   "scripts": {
-    "build-css": "node-sass-chokidar src/styles/sass -o public/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/styles/sass -o public/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "flow": "flow"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.1.4",
+    "react": "18.0.0",
+    "react-dom": "18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.1",
+    "typescript": "4.6.3"
   }
 }
