@@ -5,7 +5,7 @@ Super Rock Paper Scissors was built in honour of the old 8bit systems, in partic
 
 ![Title Screen](screenshots/1.png "Title Screen")
 
-![Game Play](screenshots/2.png "Game Play")
+![Gameplay](screenshots/2.png "Gameplay")
 
 Features
 ---
@@ -15,7 +15,7 @@ Super Rock Paper Scissors includes the following features:
     * Keeps a record of your high score
     * Earn more points the more times you win consecutively
 
-* Game Play
+* Gameplay
     * Features a game of 10 rounds
     * Each round is timed
     * Face off against the CPU

@@ -28,6 +28,24 @@
         "paths": {
             "_styles/*": [
                 "styles/*"
+            ],
+            "_redux/*": [
+                "redux/*"
+            ],
+            "_model/*": [
+                "model/*"
+            ],
+            "_components/*": [
+                "components/*"
+            ],
+            "_util/*": [
+                "util/*"
+            ],
+            "_public/*": [
+                "public/*"
+            ],
+            "_logic/*": [
+                "logic/*"
             ]
         }
     },
