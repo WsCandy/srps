@@ -1,21 +1,24 @@
 .block {
     background-color: var(--block);
     font-family: var(--title-font);
-    font-size: 9rem;
+    font-size: 7rem;
     color: var(--title);
-    text-transform: lowercase;
+    text-transform: uppercase;
     box-shadow: 3px 3px 0 var(--shadow), -3px -3px 0 var(--light-shadow);
-    padding: 0 15px 25px;
+    padding: 5px 15px 5px;
     max-width: 100%;
     margin-bottom: 3px;
 
     @media screen and (max-width: 740px) {
-        font-size: 3.8rem;
+        font-size: 3rem;
     }
 }
 
 .main {
-    text-transform: uppercase;
+    font-size: 9rem;
+    @media screen and (max-width: 740px) {
+        font-size: 3.8rem;
+    }
 }
 
 .credit {
@@ -33,4 +36,8 @@
 
 .shadow {
     text-shadow: 3px 10px 0 var(--shadow);
+
+    @media screen and (max-width: 740px) {
+        text-shadow: 2px 5px 0 var(--shadow);
+    }
 }
