@@ -34,9 +34,11 @@
 }
 
 .interactive {
-    &:hover {
-        &:after {
-            transform: translateY(-48px);
+    @media (pointer: fine) {
+        &:hover {
+            &:after {
+                transform: translateY(-48px);
+            }
         }
     }
 }
