@@ -1,0 +1,33 @@
+/* Resets some styles so it's consistent across all browsers. I've only added the basics in for now, this can be extended later if needed. */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--sky);
+}
+
+/* Strip all the base padding and margins off of all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Font imports */
+@font-face {
+    font-family: 'press_start_kregular';
+    src: url('../public/fonts/prstartk-webfont.woff2') format('woff2'),
+    url('../public/fonts/prstartk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'super_plumber_brothersregular';
+    src: url('../public/fonts/super_plumber_brothers-webfont.woff2') format('woff2'),
+    url('../public/fonts/super_plumber_brothers-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

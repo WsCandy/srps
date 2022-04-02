@@ -1,0 +1,36 @@
+.block {
+    background-color: var(--block);
+    font-family: var(--title-font);
+    font-size: 9rem;
+    color: var(--title);
+    text-transform: lowercase;
+    box-shadow: 3px 3px 0 var(--shadow), -3px -3px 0 var(--light-shadow);
+    padding: 0 15px 25px;
+    max-width: 100%;
+    margin-bottom: 3px;
+
+    @media screen and (max-width: 740px) {
+        font-size: 3.8rem;
+    }
+}
+
+.main {
+    text-transform: uppercase;
+}
+
+.credit {
+    color: var(--light-shadow);
+    font-family: var(--main-font);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    text-align: right;
+
+    @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
+    }
+}
+
+.shadow {
+    text-shadow: 3px 10px 0 var(--shadow);
+}
