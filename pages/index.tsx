@@ -4,7 +4,7 @@ import GameContainer from "_components/containers/GameContainer";
 import Head from "next/head";
 import absoluteUrl from "next-absolute-url";
 import loadLocales from "_util/loadLocales";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     readonly host: string;
