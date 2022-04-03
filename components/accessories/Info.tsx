@@ -8,12 +8,15 @@ import leftPadNumber from "_util/leftPadNumber";
 
 interface Props {
     readonly score: number;
-    readonly highScore: number;
     readonly timeRemaining: number;
+    readonly isActive: boolean;
+    readonly currentRound: number;
+    readonly multiplier: number;
 }
 
 const Info: React.FunctionComponent<Props> = props => {
-    const { score, highScore, timeRemaining } = props;
+    const { score, timeRemaining, isActive, currentRound, multiplier } = props;
+    const multi = isActive ? multiplier : 0;
 
     return (
         <div className={styles(info.base, container.base, container.row)}>
@@ -22,12 +25,19 @@ const Info: React.FunctionComponent<Props> = props => {
                     <p>Score</p>
                     <p>{leftPadNumber(score)}</p>
                 </div>
-                <div className={styles(block.base, block.center)}>
-                    <p>Top- {leftPadNumber(highScore)}</p>
+
+                <div className={styles(info.coin)}>
+                    <p><span>x</span>{leftPadNumber(multi, 2)}</p>
                 </div>
+
+                <div className={styles(block.base, block.center)}>
+                    <p>Round</p>
+                    <p>1-{currentRound}</p>
+                </div>
+
                 <div className={styles(block.base, block.right)}>
                     <p>Time</p>
-                    <p>{leftPadNumber(timeRemaining, 3)}</p>
+                    {isActive && <p>{leftPadNumber(timeRemaining, 3)}</p>}
                 </div>
             </div>
         </div>

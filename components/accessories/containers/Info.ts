@@ -5,12 +5,14 @@ import { connect } from "react-redux";
 import Info from "_components/accessories/Info";
 
 type Props = ContainerOwnProps<typeof Info, StateProps>
-type StateProps = PickProps<typeof Info, "score" | "highScore" | "timeRemaining">
+type StateProps = PickProps<typeof Info, "score" | "timeRemaining" | "isActive" | "currentRound" | "multiplier">
 
 const mapStateToProps: MapStateToProps<StateProps, Props> = state => ({
     score: state.gameplay.score,
-    highScore: state.gameplay.high_score,
-    timeRemaining: state.gameplay.timer
+    timeRemaining: state.gameplay.timer,
+    isActive: state.gameplay.active,
+    currentRound: state.gameplay.round,
+    multiplier: state.gameplay.multiplier
 });
 
 export default connect(mapStateToProps)(Info);

@@ -11,7 +11,7 @@ import highScoreLoaded from "_redux/actions/gameplay/highScoreLoaded";
 
 const INITIAL_STATE: GameplayState = {
     timer: 0,
-    round: 0,
+    round: 1,
     active: false,
     score: 0,
     high_score: 0,

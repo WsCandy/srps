@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Round from "_components/accessories/Round";
 import CPUChoice from "_components/accessories/CPUChoice";
 import Choice from "_model/Choice";
 import Victory from "_components/accessories/Victory";
@@ -39,7 +38,6 @@ const GameplayScene: React.FunctionComponent<Props> = props => {
 
     return (
         <>
-            <Round currentRound={currentRound} />
             <CPUChoice playerChoice={playerChoice} cpuChoice={cpuChoice} />
             <Victory result={result} />
             <div className={styles(container.base, container.grow, container.row, container.center)}>
