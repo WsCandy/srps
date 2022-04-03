@@ -9,25 +9,41 @@
 }
 
 .base {
+    --height: 36px;
     pointer-events: none;
-    height: 72px;
+    height: var(--height);
     width: 100%;
     position: absolute;
     left: 0;
     z-index: -1;
+
+    @media screen and (min-width: 500px){
+        --height: 72px;
+    }
 }
 
 .large {
-    --width: 192px;
+    --width: 96px;
     top: 25%;
-    background: url("/images/scenery/cloud-1.png") no-repeat;
+    background-image: url("/images/scenery/cloud-1.png");
+    background-repeat: no-repeat;
+    background-size: var(--width) var(--height);
     animation: pan 90s linear infinite;
 
+    @media screen and (min-width: 500px){
+        --width: 192px;
+    }
 }
 
 .small {
-    --width: 96px;
+    --width: 48px;
     top: 15%;
-    background: url("/images/scenery/cloud-2.png") no-repeat;
+    background-image: url("/images/scenery/cloud-2.png");
+    background-repeat: no-repeat;
+    background-size: var(--width) var(--height);
     animation: pan 60s linear infinite;
+
+    @media screen and (min-width: 500px){
+        --width: 96px;
+    }
 }
