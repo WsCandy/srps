@@ -5,6 +5,7 @@ import container from "_styles/modules/container.module.css";
 import Info from "_components/accessories/containers/Info";
 import Ground from "_components/accessories/Ground";
 import GameplayScene from "_components/containers/GameplayScene";
+import Clouds from "_components/accessories/clouds";
 
 interface Props {
     readonly isActive: boolean;
@@ -27,6 +28,7 @@ const GameContainer: React.FunctionComponent<Props> = props => {
     return (
         <div className={styles(container.base, container.full)}>
             <Info />
+            <Clouds />
             {isActive ? <GameplayScene /> : null}
             {!isActive ? <TitleScene />: null}
             <Ground />

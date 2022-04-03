@@ -1,0 +1,33 @@
+@keyframes pan {
+    0% {
+        background-position-x: calc(var(--width) * -1);
+    }
+
+    100% {
+        background-position-x: calc(100% + var(--width));
+    }
+}
+
+.base {
+    pointer-events: none;
+    height: 72px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.large {
+    --width: 192px;
+    top: 25%;
+    background: url("/images/scenery/cloud-1.png") no-repeat;
+    animation: pan 90s linear infinite;
+
+}
+
+.small {
+    --width: 96px;
+    top: 15%;
+    background: url("/images/scenery/cloud-2.png") no-repeat;
+    animation: pan 60s linear infinite;
+}
