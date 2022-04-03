@@ -5,6 +5,7 @@ import block from "_styles/modules/block.module.css";
 import info from "./styles/info.module.css";
 import styles from "_util/styles";
 import leftPadNumber from "_util/leftPadNumber";
+import { Trans } from "react-i18next";
 
 interface Props {
     readonly score: number;
@@ -22,7 +23,9 @@ const Info: React.FunctionComponent<Props> = props => {
         <div className={styles(info.base, container.base, container.row)}>
             <div className={styles(wrap.base, wrap.full, wrap.between)}>
                 <div className={block.base}>
-                    <p>Score</p>
+                    <p>
+                        <Trans i18nKey="common:score" />
+                    </p>
                     <p>{leftPadNumber(score)}</p>
                 </div>
 
@@ -31,12 +34,12 @@ const Info: React.FunctionComponent<Props> = props => {
                 </div>
 
                 <div className={styles(block.base, block.center)}>
-                    <p>Round</p>
+                    <p><Trans i18nKey="common:round" /></p>
                     <p>1-{currentRound}</p>
                 </div>
 
                 <div className={styles(block.base, block.right)}>
-                    <p>Time</p>
+                    <p><Trans i18nKey="common:time" /></p>
                     {isActive && <p>{leftPadNumber(timeRemaining, 3)}</p>}
                 </div>
             </div>

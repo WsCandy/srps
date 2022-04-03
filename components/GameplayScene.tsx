@@ -7,7 +7,7 @@ import container from "_styles/modules/container.module.css";
 import styles from "_util/styles";
 import Block from "_components/accessories/Block";
 import NextRound from "_components/accessories/containers/NextRound";
-import generateCPUChoice from "../logic/gameplay/generateCPUChoice";
+import generateCPUChoice from "_logic/gameplay/generateCPUChoice";
 
 interface Props {
     readonly playRound: (choice: Choice) => void;
@@ -38,7 +38,7 @@ const GameplayScene: React.FunctionComponent<Props> = props => {
 
     return (
         <>
-            <CPUChoice playerChoice={playerChoice} cpuChoice={cpuChoice} />
+            <CPUChoice cpuChoice={cpuChoice} />
             <Victory result={result} />
             <div className={styles(container.base, container.grow, container.row, container.center)}>
                 <Block onClick={playRound} choice={Choice.ROCK} playerChoice={playerChoice} />

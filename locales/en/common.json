@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "title": "Super Rock, Paper, Scissors",
+        "description": "Super Rock, Paper, Scissors was built in honour of the old 8-bit systems, in particular the NES. The design is a twist on the original Super Mario Bros. released in 1985."
+    },
+    "super_rock_paper_scissors": "Super Rock, Paper, Scissors",
+    "score": "Score",
+    "round": "Round",
+    "time": "Time",
+    "top": "Top- {{high_score}}",
+    "rock": "Rock",
+    "paper": "Paper",
+    "scissors": "Scissors",
+    "1_player_game": "1 Player Game",
+    "cpu_choice": "CPU Choice - ?",
+    "cpu_chose": "CPU Choice - <0/>",
+    "next_round": "Next Round",
+    "play_again": "Play Again?",
+    "end_game": "End Game",
+    "win": "You win!",
+    "lose": "You lose!",
+    "draw": "It's a draw!"
+}

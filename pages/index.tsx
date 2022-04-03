@@ -3,6 +3,8 @@ import type { GetServerSideProps, NextPage } from "next";
 import GameContainer from "_components/containers/GameContainer";
 import Head from "next/head";
 import absoluteUrl from "next-absolute-url";
+import loadLocales from "_util/loadLocales";
+import { Trans, useTranslation } from "react-i18next";
 
 interface Props {
     readonly host: string;
@@ -10,15 +12,19 @@ interface Props {
 
 const Home: NextPage<Props> = props => {
     const { host } = props;
+    const [t] = useTranslation();
 
     return (
         <>
             <Head>
-                <title>Super Rock Paper Scissors!</title>
-                <meta property="og:title" content="Super Rock Paper Scissors!" />
+                <title>
+                    {t("common:meta.title")}
+                </title>
+                <meta name="description" content={t("common:meta.description")} />
+                <meta property="og:title" content={t("common:meta.title")} />
                 <meta
                     property="og:description"
-                    content="Super Rock Paper Scissors was built in honour of the old 8bit systems, in particular the NES. The design is a twist on the original Super Mario Bros. released in 1985."
+                    content={t("common:meta.description")}
                 />
                 <meta property="og:image" content={`${host}/images/super-rock-paper-scissors.png`} />
             </Head>
@@ -28,7 +34,8 @@ const Home: NextPage<Props> = props => {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
-    return { props: { host: absoluteUrl(context.req).origin } };
+    const resources = await loadLocales(context, "common");
+    return { props: { host: absoluteUrl(context.req).origin, resources } };
 };
 
 export default Home;

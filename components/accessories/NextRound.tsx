@@ -1,6 +1,7 @@
 import React from "react";
 import Result from "_model/Result";
 import Action from "_components/accessories/Action";
+import { Trans } from "react-i18next";
 
 interface Props {
     readonly currentRound: number;
@@ -21,10 +22,10 @@ const NextRound: React.FunctionComponent<Props> = props => {
         return (
             <>
                 <Action onClick={resetGame}>
-                    Play Again?
+                    <Trans i18nKey="common:play_again" />
                 </Action>
                 <Action onClick={endGame}>
-                    End Game
+                    <Trans i18nKey="common:end_game" />
                 </Action>
             </>
         );
@@ -32,7 +33,7 @@ const NextRound: React.FunctionComponent<Props> = props => {
 
     return (
         <Action onClick={startNextRound}>
-            Next Round
+            <Trans i18nKey="common:next_round" />
         </Action>
     );
 };
