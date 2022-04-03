@@ -23,7 +23,8 @@
 }
 
 .large {
-    --width: 96px;
+    --width: 192px;
+    display: none;
     top: 25%;
     background-image: url("/images/scenery/cloud-1.png");
     background-repeat: no-repeat;
@@ -31,12 +32,13 @@
     animation: pan 90s linear infinite;
 
     @media screen and (min-width: 500px){
-        --width: 192px;
+        display: block;
     }
 }
 
 .small {
-    --width: 48px;
+    --width: 96px;
+    display: none;
     top: 15%;
     background-image: url("/images/scenery/cloud-2.png");
     background-repeat: no-repeat;
@@ -44,6 +46,6 @@
     animation: pan 60s linear infinite;
 
     @media screen and (min-width: 500px){
-        --width: 96px;
+        display: block;
     }
 }
