@@ -13,7 +13,6 @@
     "@reduxjs/toolkit": "^1.8.1",
     "i18next": "^21.6.14",
     "next": "12.1.4",
-    "next-absolute-url": "^1.2.2",
     "next-redux-wrapper": "^7.0.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",

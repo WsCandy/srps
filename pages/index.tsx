@@ -1,17 +1,11 @@
 import React from "react";
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import GameContainer from "_components/containers/GameContainer";
 import Head from "next/head";
-import absoluteUrl from "next-absolute-url";
 import loadLocales from "_util/loadLocales";
 import { useTranslation } from "react-i18next";
 
-interface Props {
-    readonly host: string;
-}
-
-const Home: NextPage<Props> = props => {
-    const { host } = props;
+const Home: NextPage = () => {
     const [t] = useTranslation();
 
     return (
@@ -26,16 +20,16 @@ const Home: NextPage<Props> = props => {
                     property="og:description"
                     content={t("common:meta.description")}
                 />
-                <meta property="og:image" content={`${host}/images/super-rock-paper-scissors.png`} />
+                <meta property="og:image" content={`https://srps-wscandy.vercel.app/images/super-rock-paper-scissors.png`} />
             </Head>
             <GameContainer />
         </>
     );
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getStaticProps: GetStaticProps = async context => {
     const resources = await loadLocales(context, "common");
-    return { props: { host: absoluteUrl(context.req).origin, resources } };
+    return { props: { resources } };
 };
 
 export default Home;
