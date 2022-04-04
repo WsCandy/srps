@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "title": "Super Sten, Saks, Papir",
+        "description": "Super Sten, Saks, Papir blev bygget til ære for de gamle 8-bit systemer, specielt NESen. Designet er inspireret af det originale Super Mario Bros. udgivet i 1985."
+    },
+    "super_rock_paper_scissors": "Super Sten, Saks, Papir",
+    "score": "Point",
+    "round": "Runde",
+    "time": "Tid",
+    "top": "Top- {{high_score}}",
+    "rock": "Sten",
+    "paper": "Saks",
+    "scissors": "Papir",
+    "1_player_game": "1 Spiller",
+    "cpu_choice": "CPU Valg - ?",
+    "cpu_chose": "CPU Valgte - <0/>",
+    "next_round": "Næste Runde",
+    "play_again": "Spil Igen?",
+    "end_game": "Slut Spillet",
+    "win": "Du Vandt!",
+    "lose": "Du Tabte!",
+    "draw": "Det blev uafgjordt!"
+}
